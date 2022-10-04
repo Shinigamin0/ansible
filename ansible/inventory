@@ -1,0 +1,10 @@
+[all]
+slave-ansible-1
+slave-ansible-2
+slave-ansible-3
+[group1]
+slave-ansible-1
+[group2]
+slave-ansible-2
+[group3]
+slave-ansible-3

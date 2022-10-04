@@ -1,0 +1,3 @@
+slave-ansible-1
+slave-ansible-2
+slave-ansible-3

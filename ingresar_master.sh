@@ -1,0 +1,1 @@
+docker exec -it master-ansible /bin/bash

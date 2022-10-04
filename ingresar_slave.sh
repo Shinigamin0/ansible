@@ -1,0 +1,1 @@
+docker exec -it slave-ansible-$1 /bin/bash

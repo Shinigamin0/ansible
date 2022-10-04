@@ -1,0 +1,33 @@
+Inventory 
+
+[all]
+slave-ansible-1
+slave-ansible-2
+slave-ansible-3
+slave-ansible-4
+slave-ansible-5
+[group1]
+slave-ansible-1
+[group2]
+slave-ansible-2
+
+Listar: ansible all -i inventory --list-host
+
+Conf : /etc/ansible/ansible.cfg
+$ANSIBLE_CONFIG
+variables de entorno
+ansible --version
+become
+become_user
+become_ask_pass
+remote_user
+
+ansible all -m command -a id
+
+ansible all -m command -a id -o
+
+ansible all -m shell -a env
+
+ansible slave-ansible-1 -m copy -a 'content="Ansible Managed\n" dest=/home/ansible/motd'
+
+

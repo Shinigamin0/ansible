@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "Comandos"
+
+echo "Ver Secciones\n"
+
+grep '^\[' ansible.cfg
+
+echo "Ver Version\n"
+
+ansible --version
+
+echo "hacer ping a todos, salida en dos lineas"
+
+ansible all -m ping
+
+echo "Hacer ping a todos salida en una linea"
+
+ansible all -m ping -o
+
+echo "Mostrar identificador y usuario con el que se ejecuta"
+
+ansible all -m command -a id
+
+ansible all -m command -a id -o
+
+echo "Mostrar env de cada nodo"
+
+ansible all -m command -a env
+
+ansible all -m shell -a env
+
+echo "hacer acciones sobre un archivo remoto"
+
+ansible slave-ansible-1 -m copy -a 'content="Ansible Managed\n" dest=/etc/motd'
